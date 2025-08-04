@@ -23,12 +23,6 @@ The following tasks were performed as part of this project:
 * Train, validate, and test the model
 * Visualize predictions using Matplotlib
 
-## Deliverables
-* Jupyter Notebook or Python scripts (The provided code snippets indicate a Jupyter Notebook format)
-* Model files (.pth)
-* Training and validation graphs (Loss/Accuracy curves)
-* GitHub Repository with README (This document)
-
 ## Folder Structure
 The project is organized with the following directory structure:
 
@@ -70,7 +64,7 @@ Animal_Image_Classifier/
     ```bash
     pip install -r requirements.txt
     ```
-    (A `requirements.txt` file would typically list `torch`, `torchvision`, `numpy`, `matplotlib`, `scikit-learn`, `seaborn`, `Pillow`, etc.)
+    (torch, numpy, torchvision, matplotlib, time, os, PIL, tempfile, scikitlearn, seaborn, pandas)
 
 3.  **Prepare the Dataset:**
     Download the dataset from the Kaggle link provided above and place the `train`, `val`, and `test` subdirectories into the `1_data` folder as per the folder structure.
