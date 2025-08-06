@@ -26,30 +26,7 @@ The following tasks were performed as part of this project:
 ## Folder Structure
 The project is organized with the following directory structure:
 
-Animal_Image_Classifier/
-├── 1_data/
-│   ├── test/                  # Images for final model testing
-│   ├── train/                 # Images for training (e.g., cats, dogs, snakes subfolders)
-│   │   ├── cats/
-│   │   ├── dogs/
-│   │   └── snakes/
-│   └── val/                   # Images for validation during training (e.g., cats, dogs, snakes subfolders)
-│       ├── cats/
-│       ├── dogs/
-│       └── snakes/
-├── 2_models/                  # Stores trained PyTorch model files (.pth)
-│   ├── best_model.pth         # Model with best validation accuracy
-│   └── final_model.pth        # Model after the last training epoch
-├── 3_notebooks/               # Contains the Jupyter Notebook/Python scripts
-│   └── your_project_notebook.ipynb
-├── 4_results/                 # Stores evaluation reports and confusion matrices
-│   ├── val_classification_report.txt
-│   └── val_confusion_matrix.png
-└── 5_outputs/                 # Stores visual outputs
-├── 1. Predictions/        # Optional: For saving individual prediction images
-└── 2. Graphs/             # For saving training and validation graphs (e.g., loss, accuracy curves)
-
-
+![alt text](image.png)
 
 ## How to Run the Code
 
