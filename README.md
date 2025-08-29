@@ -47,7 +47,7 @@ Project_01_Animal_Image_Classifier_Infotech/
 |    └── 2. Graphs/            # For saving training and validation graphs (e.g., loss, accuracy curves)
 |
 |── ReadMe.md                  # Official documentation
-└── LICENSE.md
+└── LICENSE.md                 # MIT License
 ```
 
 ---
