@@ -127,7 +127,7 @@ The evaluation includes:
 | ----------- | --------------- |
 | 🐶 Dog      | ✅ Dog           |
 | 🐱 Cat      | ✅ Cat           |
-| 🐴 Horse    | ✅ Horse         |
+| 🐍 Snake    | ✅ Snake         |
 
 ---
 
