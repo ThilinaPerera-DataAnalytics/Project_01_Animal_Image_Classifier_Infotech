@@ -1,61 +1,114 @@
-# Infotech College of Business and IT - Machine Learning with Advanced Python
-# Project 01 - Animal Image Classifier using CNN
+# 🐾 Animal Image Classifier – Deep Learning with PyTorch
 
-## Project Overview
-This project focuses on building a Convolutional Neural Network (CNN) to classify images of animals. The model is developed using PyTorch and leverages transfer learning techniques.
+An advanced deep learning project that classifies animal images using **Convolutional Neural Networks (CNNs)** and **transfer learning** with PyTorch.
 
-## Domain
-Computer Vision
+This repository demonstrates the full pipeline of building an end-to-end image classification system; from dataset preparation, transformations, model training, evaluation, and visualization of predictions.
 
-## Dataset
-The project utilizes the Animal Image Classification Dataset.
-**Dataset Source:** [Kaggle: Animal Image Classification Dataset](https://www.kaggle.com/datasets/borhanitrash/animal-image-classification-dataset/data)
+---
 
-## Key Skills Practiced
-* Image Preprocessing
-* CNN Architecture with PyTorch
-* Model Evaluation (Accuracy, Precision, Recall, F1-Score, and Confusion Matrix)
+## 🚀 Features
 
-## Tasks
-The following tasks were performed as part of this project:
-* Load and preprocess the image dataset
-* Design a 2-3 layer CNN (using a pre-trained ResNet-18 model)
-* Train, validate, and test the model
-* Visualize predictions using Matplotlib
+* ✅ **End-to-End Workflow**: Data preprocessing, training, evaluation, and deployment-ready pipeline.
+* ✅ **Transfer Learning**: Fine-tuning pre-trained CNNs for improved accuracy.
+* ✅ **GPU Acceleration**: Optimized training with CUDA/cuDNN when available.
+* ✅ **Visualization**: Model predictions with sample outputs for interpretability.
+* ✅ **Custom Dataset Support**: Easily adaptable to new image datasets.
 
-## Folder Structure
-The project is organized with the following directory structure:
+---
 
-![alt text](image.png)
+## 📂 Project Structure
 
-## How to Run the Code
+```
+Project_01_Animal_Image_Classifier_Infotech/
+├── 1_data/
+│   ├── test/                  # Images for final model testing
+│   ├── train/                 # Images for training (e.g., cats, dogs, snakes subfolders)
+│   │   ├── cats/
+│   │   ├── dogs/
+│   │   └── snakes/
+│   └── val/                   # Images for validation during training (e.g., cats, dogs, snakes subfolders)
+│       ├── cats/
+│       ├── dogs/
+│       └── snakes/
+|
+├── 2_models/                  # Stores trained PyTorch model files (.pth)
+│   ├── best_model.pth         # Model with best validation accuracy
+│   └── final_model.pth        # Model after the last training epoch
+|
+├── 3_notebooks/               # Contains the Jupyter Notebook/Python scripts
+│   └── your_project_notebook.ipynb
+|
+├── 4_results/                 # Stores evaluation reports and confusion matrices
+│   ├── val_classification_report.txt
+│   └── val_confusion_matrix.png
+|
+|── 5_outputs/                 # Stores visual outputs
+|    ├── 1. Predictions/       # Optional: For saving individual prediction images
+|    └── 2. Graphs/            # For saving training and validation graphs (e.g., loss, accuracy curves)
+|
+|── ReadMe.md                  # Official documentation
+└── LICENSE.md
+```
 
-1.  **Clone the Repository (if applicable):**
-    ```bash
-    git clone <your-repo-url>
-    cd Animal_Image_Classifier
+---
+
+## 🛠️ Tech Stack
+
+* **Language**: Python
+* **Deep Learning Framework**: PyTorch
+* **Libraries**: Torchvision, Matplotlib, NumPy, PIL
+* **Environment**: Jupyter Notebook
+* **IDE**: Visual Studio Code
+
+---
+
+## ⚙️ Installation & Setup
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/ThilinaPerera-DataAnalytics/Project_01_Animal_Image_Classifier_Infotech.git
+   cd Project_01_Animal_Image_Classifier_Infotech
+   ```
+
+2. **Install dependencies**
     ```
-
-2.  **Install Libraries:**
     Ensure you have all the required libraries by running:
-    ```bash
+
     pip install -r requirements.txt
-    ```
+    
     (torch, numpy, torchvision, matplotlib, time, os, PIL, tempfile, scikitlearn, seaborn, pandas)
+    ```
 
-3.  **Prepare the Dataset:**
+3.  **Prepare the Dataset**
+    ```
     Download the dataset from the Kaggle link provided above and place the `train`, `val`, and `test` subdirectories into the `1_data` folder as per the folder structure.
+    ```
 
-4.  **Run the Jupyter Notebook:**
+4.  **Run the Jupyter Notebook**
+    ```
     Open the `your_project_notebook.ipynb` (or similar name) located in the `3_notebooks` directory using Jupyter Notebook or JupyterLab and execute the cells sequentially.
+    ```
 
-    The notebook will:
+<font size='4'>The notebook will</font>
+
     * Load and preprocess images.
     * Initialize and train two models: a fine-tuned ResNet-18 model and a ResNet-18 feature extractor.
     * Save the trained models in the `2_models` directory.
     * Visualize model predictions.
-    * Generate and save classification reports and confusion matrices in the `4_results` directory.
-    * Display training and validation graphs (if plotting code is included to save them in `5_outputs/2. Graphs`).
+    * Generate and save classification reports and confusion matrices.
+    * Display training and validation graphs.
+
+---
+
+## 📊 Workflow Overview
+
+1. **Data Transformations** – Normalize and augment datasets for robust training.
+2. **Dataset Loading** – Structured image dataset using `ImageFolder`.
+3. **Model Architecture** – Pre-trained CNN models fine-tuned for classification.
+4. **Training Loop** – Custom training function with optimizer & learning rate scheduler.
+5. **Evaluation** – Accuracy and loss tracking per epoch.
+6. **Visualization** – Display predictions on validation images.
 
 ## Model Performance and Evaluation
 
@@ -66,4 +119,50 @@ The evaluation includes:
 * **Classification Report:** Provides precision, recall, f1-score, and support for each class.
 * **Confusion Matrix:** Visualizes the number of correct and incorrect predictions for each class.
 
-These evaluation reports (`_classification_report.txt` and `_confusion_matrix.png`) are saved in the `4_results` directory for both models, allowing for direct comparison of their classification abilities.
+---
+
+## 🖼️ Sample Output
+
+| Input Image | Predicted Class |
+| ----------- | --------------- |
+| 🐶 Dog      | ✅ Dog           |
+| 🐱 Cat      | ✅ Cat           |
+| 🐴 Horse    | ✅ Horse         |
+
+---
+
+## 📌 Next Steps
+
+* 🔹 Experiment with **ResNet, VGG, and EfficientNet** backbones.
+* 🔹 Deploy the trained model with **Flask/FastAPI** for inference.
+* 🔹 Improve performance with **hyperparameter tuning** & **data augmentation**.
+* 🔹 Add **Grad-CAM visualization** for interpretability.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please fork the repo and submit a pull request with improvements.
+
+---
+
+## 👤 Author
+
+**Thilina Perera**
+
+🔗 [LinkedIn](https://www.linkedin.com/in/thilina-perera-148aa934/) | [GitHub](https://github.com/ThilinaPerera-DataAnalytics)
+
+---
+
+## ⭐ Acknowledgements
+
+* [PyTorch](https://pytorch.org/) – Deep Learning Framework
+* [Torchvision](https://pytorch.org/vision/stable/index.html) – Image Utilities
+* [Matplotlib](https://matplotlib.org/) – Visualization
+* [Kaggle: Animal Image Classification Dataset](https://www.kaggle.com/datasets/borhanitrash/animal-image-classification-dataset/data) - Dataset Source - Train and test
+* Validation images - Google images
+---
+
+✨ If you like this project, don’t forget to **star ⭐ the repo**!
+
+---
